@@ -2,6 +2,8 @@ package com.kotlin.demo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.demo.test1.Lamdda
+import com.kotlin.demo.test1.MainTest
 
 class MainActivity : AppCompatActivity() {
 
@@ -152,9 +154,16 @@ class MainActivity : AppCompatActivity() {
         println("class name hello world: " + HelloWorld::class.java.simpleName)//HelloWorld
         println("class name hello world: " + HelloWorld::class.java.name)//com.kotlin.demo.HelloWorld
         println("part of the class name of HelloWorld: "
-                + HelloWorld::class.java.simpleName.slice(0 until helloWorldLength)) // [0, 11) 不包含 11啊
+                + HelloWorld::class.java.simpleName.slice(0 until helloWorldLength-2)) // [0, 11) 不包含 11啊
         println("the length of hello world is : " + helloWorldLength)
         println("the length of hello world is (long): " + helloWorldLengthLong)
+
+        //变量的
+        val mainTest:MainTest= MainTest()
+        mainTest.toTest1()
+
+        val lamdda: Lamdda=Lamdda()
+
 
     }
     //一个构造方法，可以不要 constructor  继承
