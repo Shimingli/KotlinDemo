@@ -3,6 +3,7 @@ package com.kotlin.demo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.kotlin.demo.class_demo.Gril
+import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
 
@@ -168,7 +169,13 @@ class MainActivity : AppCompatActivity() {
         val gril=Gril("18","182kg","好看")
         gril.sing("爱我")
 
+         val operatordemo= OperatorDemo(2.2,2.4)
+         val operatordemo2= OperatorDemo(2.2,2.4)
+        //重写 toString的方法
+        println(operatordemo.plus(operatordemo2))//com.kotlin.demo.operator.OperatorDemo@a675f990
+        //当 重写 写了toString的方法的话 4.4+4.8
 
+        println(operatordemo.plus(55551))
     }
     //一个构造方法，可以不要 constructor  继承
     class Bean constructor(  eag:String, face:String, voice:String):BaseBean(eag, face, voice){

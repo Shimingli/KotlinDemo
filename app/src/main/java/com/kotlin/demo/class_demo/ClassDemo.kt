@@ -17,7 +17,7 @@ class Gril(var eag: String, var heigh: String, var face: String) {
 
         println(a.cc?.length)
         //我告诉 虚拟器我不为null  但是我实际是null
-        println(a.cc!!.length)//  at com.kotlin.demo.class_demo.Gril.sing(ClassDemo.kt:19)
+       // println(a.cc!!.length)//  at com.kotlin.demo.class_demo.Gril.sing(ClassDemo.kt:19)
 
 
     }
