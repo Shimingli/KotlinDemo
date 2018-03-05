@@ -2,6 +2,7 @@ package com.kotlin.demo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.demo.Expression.ExpressionDemo
 import com.kotlin.demo.class_demo.Gril
 import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.test1.Lamdda
@@ -176,6 +177,9 @@ class MainActivity : AppCompatActivity() {
         //当 重写 写了toString的方法的话 4.4+4.8
 
         println(operatordemo.plus(55551))
+
+
+        val expressoin= ExpressionDemo()
     }
     //一个构造方法，可以不要 constructor  继承
     class Bean constructor(  eag:String, face:String, voice:String):BaseBean(eag, face, voice){
