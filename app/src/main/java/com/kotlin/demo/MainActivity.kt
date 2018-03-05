@@ -2,6 +2,7 @@ package com.kotlin.demo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.demo.class_demo.Gril
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
 
@@ -163,6 +164,9 @@ class MainActivity : AppCompatActivity() {
         mainTest.toTest1()
 
         val lamdda: Lamdda=Lamdda()
+
+        val gril=Gril("18","182kg","好看")
+        gril.sing("爱我")
 
 
     }
