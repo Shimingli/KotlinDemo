@@ -35,6 +35,10 @@ open class TwoTwoBean constructor( var eag:String,var face:String,var voice:Stri
         println("shiming   end" )
     }
 
+    override fun toString(): String {
+        return super.toString()
+    }
+
     open class Parent (){
 
     }

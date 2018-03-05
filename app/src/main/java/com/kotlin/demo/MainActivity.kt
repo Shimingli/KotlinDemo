@@ -84,8 +84,78 @@ class MainActivity : AppCompatActivity() {
 
         //判断是不是null ，是空的话 ，就返回
 
-        value.name?:return
+       // value.name?:return
         println("上面return、 我打印不出啊")
+
+        //rangeTo 区间
+        val range:IntRange=0..1024 //等于 [0,1024]
+        val rang_exclusive:IntRange =0 until 1024 //[0,1023]
+
+        val emptyRange:IntRange=0..-1
+
+        println("shiming new shart ")
+
+        println("emptyRange"+emptyRange.isEmpty())
+        println("range"+range.contains(50))
+        println("range"+range.contains(1024))
+        println("range"+rang_exclusive.contains(1024))
+        println("range"+rang_exclusive.contains(1023))
+
+        println("true or false "+(20 in range))
+       // for 循环在这里哦
+//        for (i in range){
+//            println("$i="+i)
+//        }
+
+         //数组 Array 一列对象，一点儿关系都没有哦
+
+        val  arrayInt:IntArray= intArrayOf(1,3,5,7)
+        val  arrayCar:CharArray= charArrayOf('1','2','3','4')
+        val  arrayString:Array<String> = arrayOf("string")
+
+        val  arrBean :Array<TwoTwoBean> = arrayOf(TwoTwoBean("a","d","d"))
+
+        println("打印数据的size哦" +arrayInt.size)
+        for (i in arrayCar){
+            println("$i="+i)
+        }
+        //替换赋值的问题  数组的角标也是从0开始的
+        println(arrayCar[1])
+        arrayCar[1]= '\u00ff'
+        println(arrayCar[1])
+
+        arrayCar.joinToString()
+
+        //1, ÿ, 3, 4
+        println(arrayCar.joinToString())
+        //不要逗号的 分割 ,, ,, ,, ,
+        println(arrayCar.joinToString(){","})
+        //1ÿ34
+        println(arrayCar.joinToString(""))
+        //[ÿ, 3]  取出1和2角标的元素  切片
+        println(arrayCar.slice(1..2))
+
+        //一些变量的操作的例子实例
+        val FINAL_HELLO_WORLD: String = "Hello World"
+        var helloWorld: String = FINAL_HELLO_WORLD
+        var nullableHelloWorld: String? = helloWorld
+        val helloWorldArray: Array<Char> = arrayOf('H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd')
+        val helloWorldCharArray: CharArray = charArrayOf('H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd')
+        val helloWorldLength: Int = helloWorld.length
+        val helloWorldLengthLong: Long = helloWorldLength.toLong()
+
+        println("final hello world: " + FINAL_HELLO_WORLD)
+        println("assignable hello world: " + helloWorld)
+        println("hello world from nullable type: " + nullableHelloWorld)
+        println("hello world from Array: " + helloWorldArray.joinToString(""))
+        println("hello world from CharArray: " + String(helloWorldCharArray))
+        println("class name hello world: " + HelloWorld::class.java.simpleName)//HelloWorld
+        println("class name hello world: " + HelloWorld::class.java.name)//com.kotlin.demo.HelloWorld
+        println("part of the class name of HelloWorld: "
+                + HelloWorld::class.java.simpleName.slice(0 until helloWorldLength)) // [0, 11) 不包含 11啊
+        println("the length of hello world is : " + helloWorldLength)
+        println("the length of hello world is (long): " + helloWorldLengthLong)
+
     }
     //一个构造方法，可以不要 constructor  继承
     class Bean constructor(  eag:String, face:String, voice:String):BaseBean(eag, face, voice){
@@ -144,6 +214,8 @@ class MainActivity : AppCompatActivity() {
         println(rawString)  //有$了
 
         println(rawString.length)
+
+
 
     }
 
