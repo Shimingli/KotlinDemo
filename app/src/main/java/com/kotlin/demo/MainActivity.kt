@@ -3,6 +3,7 @@ package com.kotlin.demo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.kotlin.demo.Expression.ExpressionDemo
+import com.kotlin.demo.Extends.Extends
 import com.kotlin.demo.abstract_interface.C
 import com.kotlin.demo.abstract_interface.ClassCanSeeDemo
 import com.kotlin.demo.abstract_interface.OverLoads
@@ -203,6 +204,8 @@ class MainActivity : AppCompatActivity() {
         val OverLoads= OverLoads()
         OverLoads.a(1)
         OverLoads.a()//不传入的话 ，就相当 只调用一个函数
+
+        val Extends= Extends()
 
     }
     //一个构造方法，可以不要 constructor  继承
