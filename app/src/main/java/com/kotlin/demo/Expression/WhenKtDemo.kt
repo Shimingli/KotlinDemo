@@ -17,7 +17,7 @@ class WhenKtDemo{
         }
          //when和 if语句一样的 也有返回值，下面的意思是
         //但x=4的时候，返回为1 不然就返回为0
-        val i = when {x == 4 -> 1
+        val i = when { x == 4 -> 1
             else
             -> 0
         }

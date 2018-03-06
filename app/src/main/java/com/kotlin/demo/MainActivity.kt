@@ -3,6 +3,10 @@ package com.kotlin.demo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.kotlin.demo.Expression.ExpressionDemo
+import com.kotlin.demo.abstract_interface.C
+import com.kotlin.demo.abstract_interface.ClassCanSeeDemo
+import com.kotlin.demo.abstract_interface.OverLoads
+import com.kotlin.demo.abstract_interface.StaticDemo
 import com.kotlin.demo.catch_demo.CatchDEmo
 import com.kotlin.demo.class_demo.Gril
 import com.kotlin.demo.fordemo.ForDemo
@@ -189,6 +193,17 @@ class MainActivity : AppCompatActivity() {
         val CatchDEmo= CatchDEmo()
         //具名参数 ，变成参数
         val ParameterDemo= ParameterDemo()
+
+        val C=C()
+
+
+        val ClassCanSeeDemo= ClassCanSeeDemo()
+
+        val StaticDemo= StaticDemo()
+        val OverLoads= OverLoads()
+        OverLoads.a(1)
+        OverLoads.a()//不传入的话 ，就相当 只调用一个函数
+
     }
     //一个构造方法，可以不要 constructor  继承
     class Bean constructor(  eag:String, face:String, voice:String):BaseBean(eag, face, voice){
