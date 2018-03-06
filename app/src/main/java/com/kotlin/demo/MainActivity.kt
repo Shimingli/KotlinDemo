@@ -3,7 +3,9 @@ package com.kotlin.demo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.kotlin.demo.Expression.ExpressionDemo
+import com.kotlin.demo.catch_demo.CatchDEmo
 import com.kotlin.demo.class_demo.Gril
+import com.kotlin.demo.fordemo.ForDemo
 import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
@@ -180,6 +182,10 @@ class MainActivity : AppCompatActivity() {
 
 
         val expressoin= ExpressionDemo()
+        //for循环的
+        val ForDemo= ForDemo()
+
+        val CatchDEmo= CatchDEmo()
     }
     //一个构造方法，可以不要 constructor  继承
     class Bean constructor(  eag:String, face:String, voice:String):BaseBean(eag, face, voice){
