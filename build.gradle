@@ -9,10 +9,18 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
+        //加入这两个依赖的原因是  data class 被编译成了final的了 同时可以生产无参构造放方法
+        //所以官方出了两个插件来解决 傻逼 注意添加的位置啊
+//        classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlin_version"
+//        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
     }
 }
 
@@ -23,6 +31,16 @@ allprojects {
     }
 }
 
+apply plugin: 'kotlin-noarg'//这两个插件 是官方提供的 防止 data class 被编译成了final
+apply plugin: 'kotlin-allopen'//
+
+//被Poko标注的话，编译后的final 就会去掉
+noArg{
+    annotation("com.kotlin.demo.annotations.PoKo")
+}
+allOpen{
+    annotation("com.kotlin.demo.annotations.PoKo")
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
