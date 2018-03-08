@@ -5,6 +5,9 @@ import android.os.Bundle
 import com.kotlin.demo.Delegates.Delegates
 import com.kotlin.demo.Expression.ExpressionDemo
 import com.kotlin.demo.Extends.Extends
+import com.kotlin.demo.Higher_order_function.DemoKotlinFunction
+import com.kotlin.demo.Higher_order_function.HigherOrderFunction
+import com.kotlin.demo.Higher_order_function.HigherOrderFunctionDemo
 import com.kotlin.demo.abstract_interface.C
 import com.kotlin.demo.abstract_interface.ClassCanSeeDemo
 import com.kotlin.demo.abstract_interface.OverLoads
@@ -241,6 +244,19 @@ class MainActivity : AppCompatActivity() {
         val SealedClassDemo :SealedClassDemo
 
         println("密封类 sealed class  end ")
+
+        println("高阶函数 start ")
+        val HigherOrderFunction= HigherOrderFunction()
+        //Demo
+        val HigherOrderFunctionDemo= HigherOrderFunctionDemo()
+        val DemoKotlinFunction= DemoKotlinFunction()
+        DemoKotlinFunction.setContext(this)
+
+
+
+        println("高阶函数 end ")
+
+
     }
 
 
