@@ -12,10 +12,12 @@ import com.kotlin.demo.abstract_interface.StaticDemo
 import com.kotlin.demo.bean_demo.DataClass
 import com.kotlin.demo.catch_demo.CatchDEmo
 import com.kotlin.demo.class_demo.Gril
+import com.kotlin.demo.enum_demo.LogLevel
 import com.kotlin.demo.fordemo.ForDemo
 import com.kotlin.demo.innerClassDemo.InnerClassDemo
 import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.parameter_demo.ParameterDemo
+import com.kotlin.demo.sealed_class_demo.SealedClassDemo
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
 
@@ -221,6 +223,24 @@ class MainActivity : AppCompatActivity() {
 
        val InnerClassDemo = InnerClassDemo()
 
+
+        println("枚举   start")
+        println(LogLevel.DEBUG.getTag()) //2,++DEBUG
+        // ordinal 表示是第几个位置  这样就知道枚举的位置在哪里
+        println(LogLevel.DEBUG.ordinal) //==1
+        println(LogLevel.VERROSE.ordinal) //==1
+       // 打印元素 在这里
+        LogLevel.values().map ( ::println )
+
+        //DEBUG 我的名字在前面，1 这是我的位置，排在第几个的地方
+        println(LogLevel.valueOf("DEBUG"))
+        println("枚举  end")
+
+
+        println("密封类 sealed class  start ")
+        val SealedClassDemo :SealedClassDemo
+
+        println("密封类 sealed class  end ")
     }
 
 
