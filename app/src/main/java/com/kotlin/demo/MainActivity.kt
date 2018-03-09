@@ -15,12 +15,15 @@ import com.kotlin.demo.abstract_interface.StaticDemo
 import com.kotlin.demo.bean_demo.DataClass
 import com.kotlin.demo.catch_demo.CatchDEmo
 import com.kotlin.demo.class_demo.Gril
+import com.kotlin.demo.closure.ClosureDemo
+import com.kotlin.demo.compose_demo.ComposeDemoKt
 import com.kotlin.demo.enum_demo.LogLevel
 import com.kotlin.demo.fordemo.ForDemo
 import com.kotlin.demo.innerClassDemo.InnerClassDemo
 import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.parameter_demo.ParameterDemo
 import com.kotlin.demo.sealed_class_demo.SealedClassDemo
+import com.kotlin.demo.tailrecursive.Tailrecusive
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
 
@@ -252,11 +255,19 @@ class MainActivity : AppCompatActivity() {
         val DemoKotlinFunction= DemoKotlinFunction()
         DemoKotlinFunction.setContext(this)
 
-
-
         println("高阶函数 end ")
 
+        println("尾递归 优化  start")
+        val Tailrecusive= Tailrecusive()
+        println("尾递归 优化  end")
 
+        println("闭包  start")
+        val ClosureDemo= ClosureDemo()
+        println("闭包  end")
+
+        println("复合函数  start")
+        val ComposeDemoKt= ComposeDemoKt()
+        println("复合函数  end")
     }
 
 
