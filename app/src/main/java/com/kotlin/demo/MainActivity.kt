@@ -2,6 +2,9 @@ package com.kotlin.demo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.demo.Currying_Demo.CurryingDemoKt
+import com.kotlin.demo.Currying_Demo.Demo
+import com.kotlin.demo.DSL_demo.DSLDemo
 import com.kotlin.demo.Delegates.Delegates
 import com.kotlin.demo.Expression.ExpressionDemo
 import com.kotlin.demo.Extends.Extends
@@ -268,6 +271,15 @@ class MainActivity : AppCompatActivity() {
         println("复合函数  start")
         val ComposeDemoKt= ComposeDemoKt()
         println("复合函数  end")
+
+        println("柯里化  start")
+        val CurryingDemoKt= CurryingDemoKt()
+        val Demo= Demo(this)
+        println("柯里化 偏函数  end")
+
+        println("DSL  start")
+        val DSLDemo= DSLDemo()
+        println("DSL   end")
     }
 
 
