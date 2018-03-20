@@ -34,6 +34,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     //加入这两个依赖的原因是  data class 被编译成了final的了
     //所以官方出了两个插件来解决 傻逼 注意添加的位置啊
 //    compile "org.jetbrains.kotlin:kotlin-noarg:$kotlin_version"

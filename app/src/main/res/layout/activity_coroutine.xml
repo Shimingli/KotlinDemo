@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kotlin.demo.CoroutineActivity">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.kotlin.demo.MainActivity">
+        <TextView
+            android:textSize="22sp"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:text="由于我没有找到安卓里面切换线程的工具类，所以下面所有的例子都在线程池中，但是在安卓中也是可以加载出来图片的"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:id="@+id/text"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:text="点我开始下载 协程的Demo下载的图片 这里面的所有的都在主线程中进行的，所以不好 真的不好 看日志获取详细的信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image"
+            android:scaleType="fitXY"
+            android:background="#33225477"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <TextView
+            android:textSize="22sp"
+            android:id="@+id/text1"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:text="这是在子线程中加载的图片，点我就可以加载图片出来了哦 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image1"
+            android:scaleType="fitXY"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <TextView
+            android:textSize="22sp"
+            android:id="@+id/text2"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:text="点我另外一中的例子"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image2"
+            android:scaleType="fitXY"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <TextView
+            android:textSize="22sp"
+            android:id="@+id/text3"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:text="封装完全的例子在这里,如果加载不出来图片的话 UiContinuationWrapper 注意这个类中的context是不是空的，还是传入进来的"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image3"
+            android:scaleType="fitXY"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+    </LinearLayout>
+
+</ScrollView>
