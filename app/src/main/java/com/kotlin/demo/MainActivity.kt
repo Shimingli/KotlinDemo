@@ -3,11 +3,13 @@ package com.kotlin.demo
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.kotlin.demo.Coroutine_Demo.CoroutineDemo
+import com.kotlin.demo.Coroutine_Demo.sequence.SeqMain
 import com.kotlin.demo.Currying_Demo.CurryingDemoKt
 import com.kotlin.demo.Currying_Demo.Demo
 import com.kotlin.demo.DSL_demo.DSLDemo
@@ -35,6 +37,8 @@ import com.kotlin.demo.sealed_class_demo.SealedClassDemo
 import com.kotlin.demo.tailrecursive.Tailrecusive
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
+import kotlinx.coroutines.experimental.delay
+import kotlinx.coroutines.experimental.launch
 
 @Suppress("UNUSED_EXPRESSION")
 class MainActivity : AppCompatActivity() {
@@ -290,7 +294,26 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,CoroutineActivity::class.java))
 
         })
-
+        /**
+         * 多个线程相对独立，有自己的上下文，但是他的切换受了系统影响
+         * 协程也是相对独立的，有自己的上下文，但是切换是有自己控制的，可以由自身决定
+         * 是否切换到其他的协程中，
+         */
+        /**
+         * 协程的优势：
+         * 1、极高的执行的效率，协程的子程序切换不是线程控制的，而是
+         * 有程序自身的控制，因此，协程没有线程切换的开销。
+         * 2.不需要多线程的锁机制，只有一个线程，也不存在同时写变量的冲突
+         * ，在协程中控制共享资源不加锁，只需要判断状态
+         */
+        val SeqMain= SeqMain()
+        //协程的框架
+        println("shiming  这里是延迟1s start"  +System.currentTimeMillis())
+        launch {
+            delay(1000)
+            println("shiming  这里是延迟1s end "  +System.currentTimeMillis())
+            println("shiming   这里是延迟1s Hello from Kotlin Coroutines!")
+        }
     }
 
 
