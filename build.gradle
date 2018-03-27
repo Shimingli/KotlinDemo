@@ -36,7 +36,7 @@ apply plugin: 'kotlin-allopen'//
 
 //被Poko标注的话，编译后的final 就会去掉
 noArg{
-    annotation("com.kotlin.demo.annotations.PoKo")
+    annotation "com.kotlin.demo.java_reflections.Poko2"
 }
 allOpen{
     annotation("com.kotlin.demo.annotations.PoKo")

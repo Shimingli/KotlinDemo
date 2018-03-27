@@ -31,6 +31,7 @@ import com.kotlin.demo.compose_demo.ComposeDemoKt
 import com.kotlin.demo.enum_demo.LogLevel
 import com.kotlin.demo.fordemo.ForDemo
 import com.kotlin.demo.innerClassDemo.InnerClassDemo
+import com.kotlin.demo.java_reflections.JavaReflections
 import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.parameter_demo.ParameterDemo
 import com.kotlin.demo.sealed_class_demo.SealedClassDemo
@@ -311,9 +312,11 @@ class MainActivity : AppCompatActivity() {
         println("shiming  这里是延迟1s start"  +System.currentTimeMillis())
         launch {
             delay(1000)
-            println("shiming  这里是延迟1s end "  +System.currentTimeMillis())
-            println("shiming   这里是延迟1s Hello from Kotlin Coroutines!")
+//            println("shiming  这里是延迟1s end "  +System.currentTimeMillis())
+//            println("shiming   这里是延迟1s Hello from Kotlin Coroutines!")
         }
+        println("shiming  Kotlin 中使用java 反射 start")
+        val JavaReflections= JavaReflections()
     }
 
 
