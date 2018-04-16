@@ -46,7 +46,8 @@ dependencies {
     //kotlin 中使用 kotlin的反射
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 //    compile "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
-
+    //主要是使用inline这个关键字 添加的依赖
+     compile "com.google.code.gson:gson:2.8.1"
 
 }
 repositories {

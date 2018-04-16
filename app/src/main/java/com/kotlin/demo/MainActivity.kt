@@ -30,11 +30,13 @@ import com.kotlin.demo.closure.ClosureDemo
 import com.kotlin.demo.compose_demo.ComposeDemoKt
 import com.kotlin.demo.enum_demo.LogLevel
 import com.kotlin.demo.fordemo.ForDemo
+import com.kotlin.demo.generics.Generics
 import com.kotlin.demo.innerClassDemo.InnerClassDemo
 import com.kotlin.demo.java_reflections.JavaReflections
 import com.kotlin.demo.operator.OperatorDemo
 import com.kotlin.demo.parameter_demo.ParameterDemo
 import com.kotlin.demo.sealed_class_demo.SealedClassDemo
+import com.kotlin.demo.star_demo.StartDemo
 import com.kotlin.demo.tailrecursive.Tailrecusive
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
@@ -172,7 +174,7 @@ class MainActivity : AppCompatActivity() {
         //1ÿ34
         println(arrayCar.joinToString(""))
         //[ÿ, 3]  取出1和2角标的元素  切片
-        println(arrayCar.slice(1..2))
+        println("shiming arraycar"+arrayCar.slice(1..2))
 
         //一些变量的操作的例子实例
         val FINAL_HELLO_WORLD: String = "Hello World"
@@ -317,6 +319,10 @@ class MainActivity : AppCompatActivity() {
         }
         println("shiming  Kotlin 中使用java 反射 start")
         val JavaReflections= JavaReflections()
+
+        val StartDemo= StartDemo()
+
+        val Generics= Generics()
     }
 
 
