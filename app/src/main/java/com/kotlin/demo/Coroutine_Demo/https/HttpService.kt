@@ -1,5 +1,6 @@
 package com.kotlin.demo.Coroutine_Demo.https
 
+import android.graphics.Point
 import com.kotlin.demo.Coroutine_Demo.log
 import okhttp3.ResponseBody
 import retrofit2.Retrofit
@@ -28,3 +29,13 @@ interface Service{
     @retrofit2.http.GET
     fun getImg(@retrofit2.http.Url fileURL: String):retrofit2.Call<ResponseBody>
 }
+
+fun String.lastChar(): Char = get(length - 1)
+
+/**
+ * Point 安卓中的类，我们支持运算符重载
+ */
+operator fun Point.plus(other: Point): Point {
+    return Point(x + other.x, y + other.y)
+}
+

@@ -1,6 +1,7 @@
 package com.kotlin.demo
 
 import android.content.Intent
+import android.graphics.Point
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
@@ -9,6 +10,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.kotlin.demo.Coroutine_Demo.CoroutineDemo
+import com.kotlin.demo.Coroutine_Demo.https.lastChar
+import com.kotlin.demo.Coroutine_Demo.https.plus
 import com.kotlin.demo.Coroutine_Demo.sequence.SeqMain
 import com.kotlin.demo.Currying_Demo.CurryingDemoKt
 import com.kotlin.demo.Currying_Demo.Demo
@@ -403,5 +406,27 @@ class MainActivity : AppCompatActivity() {
         val anInt:Int=5
         val aLong :Long=anInt.toLong()//需要toLong
 
+        "me new Method".lastChar()
+
+         val p1 = Point(10, 20)
+         val p2 = Point(30, 40)
+          println(p1 + p2)
+
+
     }
+}
+
+/**
+ * 在Java中写一个main函数，你得先有一个类
+ * 然而在Kotlin中就变得不一样了，main函数必须是写在类外面的，在idea中创建一个Kotlin File，
+ * 写下下面的代码（输入main，然后按table就自动生成了）：
+ *
+ * 如果你是创建了一个Kotlin Class 文件，则在类外面写即可。
+ * main函数是不依赖于类的，所以main函数是一个top-level函数
+ *
+ * 直接定义在文件之下，所以都是top-level。
+ * 如果是在类体里面申明的变量，函数，class，object，enum就不是top-level
+ */
+fun main(args: Array<String>) {
+    println("shiming  我是 topLevel 函数")
 }

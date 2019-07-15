@@ -44,3 +44,4 @@ class A {
 }
 
 class X
+
