@@ -1,7 +1,8 @@
-package com.kotlin.demo.Coroutine_Demo.async
 
 import com.kotlin.demo.Coroutine_Demo.async.AsynTask
-import com.kotlin.demo.Coroutine_Demo.async.AsyncBaseContinuation
+import com.kotlin.demo.Coroutine_Demo.async.AsyncBaseContinuationMore
+import com.kotlin.demo.Coroutine_Demo.async.AsyncContext
+import com.kotlin.demo.Coroutine_Demo.async.UiContinuationWrapper
 import com.kotlin.demo.Coroutine_Demo.https.HttpError.HTTP_ERROR_UNKNOWN
 import com.kotlin.demo.Coroutine_Demo.https.HttpException
 import com.kotlin.demo.Coroutine_Demo.https.HttpService
@@ -58,7 +59,7 @@ suspend fun asyncImageLoda(url: String) = suspendCoroutine<ByteArray> { con ->
 suspend fun asyncImageLodaMore(url: String) = suspendCoroutine<ByteArray> {
     con ->
     //这里感觉不太好，这里还有写个方法
-    val uiContinuationWrapper=UiContinuationWrapper(con)
+    val uiContinuationWrapper= UiContinuationWrapper(con)
     AsynTask {
         try {
             val execute = HttpService.serviceDemo.getImg(url).execute()
