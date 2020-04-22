@@ -44,7 +44,7 @@ import com.kotlin.demo.tailrecursive.Tailrecusive
 import com.kotlin.demo.test1.Lamdda
 import com.kotlin.demo.test1.MainTest
 import kotlinx.coroutines.experimental.delay
-import kotlinx.coroutines.experimental.launch
+
 
 @Suppress("UNUSED_EXPRESSION")
 class MainActivity : AppCompatActivity() {
@@ -315,11 +315,11 @@ class MainActivity : AppCompatActivity() {
         val SeqMain= SeqMain()
         //协程的框架
         println("shiming  这里是延迟1s start"  +System.currentTimeMillis())
-        launch {
-            delay(1000)
-//            println("shiming  这里是延迟1s end "  +System.currentTimeMillis())
-//            println("shiming   这里是延迟1s Hello from Kotlin Coroutines!")
-        }
+//         {
+//            delay(1000)
+////            println("shiming  这里是延迟1s end "  +System.currentTimeMillis())
+////            println("shiming   这里是延迟1s Hello from Kotlin Coroutines!")
+//        }
         println("shiming  Kotlin 中使用java 反射 start")
         val JavaReflections= JavaReflections()
 

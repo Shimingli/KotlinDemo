@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/KotlinDemo.iml" filepath="$PROJECT_DIR$/.idea/KotlinDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/KotlinDemo.iml" filepath="$PROJECT_DIR$/KotlinDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/KotlinDemo-app.iml" filepath="$PROJECT_DIR$/app/KotlinDemo-app.iml" group="KotlinDemo/app" />
+      <module fileurl="file://$PROJECT_DIR$/My_Worck_Space-KotlinDemo.iml" filepath="$PROJECT_DIR$/My_Worck_Space-KotlinDemo.iml" group="KotlinDemo" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

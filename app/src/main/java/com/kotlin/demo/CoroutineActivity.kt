@@ -14,7 +14,12 @@ import com.kotlin.demo.Coroutine_Demo.getPicFromBytes
 import com.kotlin.demo.Coroutine_Demo.log
 import startCoroutine
 import android.graphics.Bitmap
+import asyncImageLodaMore
+import asyncstartCoroutine
 import com.kotlin.demo.Coroutine_Demo.async.*
+import 我要开始协程啦
+import 这是最后的封装的方法封装了耗时的操作
+import 这是最后的封装的方法开始加载图片
 
 
 @Suppress("UNREACHABLE_CODE")

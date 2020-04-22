@@ -8,7 +8,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.6.3'
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         //加入这两个依赖的原因是  data class 被编译成了final的了 同时可以生产无参构造放方法
